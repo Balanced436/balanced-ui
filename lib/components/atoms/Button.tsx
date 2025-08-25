@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { type ButtonHTMLAttributes, type ReactNode } from 'react';
+import {type ButtonHTMLAttributes, JSX, type ReactNode} from 'react';
 type Variant = "primary" | "secondary";
 type Size = "small" | "medium" | "large";
 
@@ -44,7 +44,7 @@ const StyledButton = styled.button<MyButtonProps>`
  *   - `size`: "small", "medium", "large")
  * @returns {ReactNode} A button
  */
-export const Button = ({ children, variant = "primary", size = "small", ...props }: MyButtonProps): ReactNode => {
+export const Button = ({ children, variant = "primary", size = "small", ...props }: MyButtonProps): JSX.Element => {
     return <StyledButton variant={variant} size={size} {...props}>{children}</StyledButton>;
 };
 

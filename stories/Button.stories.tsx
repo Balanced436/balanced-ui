@@ -3,7 +3,7 @@ import { StoryFn } from "@storybook/react";
 import { Button } from "../lib/main";
 
 const meta = {
-  title: "UI/CorpusesUI",
+  title: "UI/Atoms",
   component: Button,
   tags: ["autodocs"],
   args: {
