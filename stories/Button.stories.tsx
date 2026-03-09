@@ -1,26 +1,24 @@
-import { StoryFn } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react';
+import { Button } from '../lib/main';
 
-import { Button } from "../lib/main";
-import {JSX} from "react";
-
-const meta = {
-  title: "UI/Atoms",
+const meta: Meta<typeof Button> = {
+  title: 'UI/Molecules',
   component: Button,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   args: {
-    children: "Cliquez ici",
+    children: 'Cliquez ici',
   },
   argTypes: {
     size: {
-      control: { type: "select" },
+      control: { type: 'select' },
     },
   },
 };
 
 export default meta;
 
-// The corrected and completed line:
-const Template: (args) => JSX.Element = (args) => <Button {...args}>{args.children}</Button>;
+type Story = StoryObj<typeof Button>;
 
-export const Standard = Template.bind({});
-Standard.args = {};
+export const Standard: Story = {
+  args: {},
+};
