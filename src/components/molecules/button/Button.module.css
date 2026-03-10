@@ -7,14 +7,14 @@
     padding: 0 0.875rem;
     margin: 0;
     outline: 0;
-    border: 1px solid var(--color-gray-200);
+    border: 1px solid var(--btn-border-color);
     border-radius: 0.375rem;
-    background-color: var(--color-gray-50);
+    background-color: var(--btn-bg-color);
     font-family: inherit;
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.5rem;
-    color: var(--color-gray-900);
+    color: var(--btn-txt-color);
     user-select: none;
 
     @media (hover: hover) {

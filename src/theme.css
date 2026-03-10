@@ -1,0 +1,12 @@
+@import "src/components/token/colors.css";
+@import "src/components/token/typography.css";
+:root {
+    /* Couleurs de base du bouton (Mode Clair par défaut) */
+    --btn-bg-color: var(--color-gray-50);
+    --btn-txt-color: var(--color-gray-900);
+    --btn-border-color: var(--color-gray-200);
+
+    --btn-bg-hover: var(--color-gray-100);
+    --btn-bg-active: var(--color-gray-200);
+
+}

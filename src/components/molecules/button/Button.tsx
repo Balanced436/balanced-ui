@@ -1,8 +1,7 @@
 import { Button as BaseButton } from '@base-ui/react/button';
 import type { ButtonHTMLAttributes, ReactNode, JSX } from 'react';
 
-import styles from './index.module.css';
-import './theme.css';
+import styles from './Button.module.css';
 
 type Variant = 'primary' | 'secondary';
 type Size = 'small' | 'medium' | 'large';
