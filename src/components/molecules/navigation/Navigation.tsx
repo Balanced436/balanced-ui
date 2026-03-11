@@ -1,31 +1,27 @@
+import * as React from 'react';
 import { NavigationMenu } from '@base-ui/react/navigation-menu';
 import styles from './Navigation.module.css';
 
-export interface NavigationItem {
-  label: string;
-  href: string;
-}
-
 interface NavigationProps {
-  items: NavigationItem[];
+  children: React.ReactNode;
 }
 
-export function Navigation({ items = [] }: NavigationProps) {
+export function Navigation({ children }: NavigationProps) {
   return (
     <NavigationMenu.Root className={styles.Root}>
       <NavigationMenu.List className={styles.List}>
-        {items.map((item, index) => (
-          <NavigationMenu.Item key={index}>
-            <Link className={styles.Trigger} href={item.href}>
-              {item.label}
-            </Link>
-          </NavigationMenu.Item>
-        ))}
+        {children}
       </NavigationMenu.List>
     </NavigationMenu.Root>
   );
 }
 
-function Link(props: NavigationMenu.Link.Props) {
-  return <NavigationMenu.Link render={<a />} {...props} />;
+export function NavigationItem({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <NavigationMenu.Item>
+      <NavigationMenu.Link className={styles.Trigger} href={href} render={<a />}>
+        {children}
+      </NavigationMenu.Link>
+    </NavigationMenu.Item>
+  );
 }

@@ -1,15 +1,25 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Navigation } from '../src/main';
+import { Navigation, NavigationItem } from '../src/main';
 
 const meta: Meta<typeof Navigation> = {
   title: 'UI/Molecules/Navigation',
   component: Navigation,
   tags: ['autodocs'],
   args: {
-    items: [{"label": "Accueil", "href": "/"}, {"label": "À propos", "href": "/about"}, {"label": "Contact", "href": "/contact"}],
+    children: [
+      <NavigationItem key="1" href="/">
+        Accueil
+      </NavigationItem>,
+      <NavigationItem key="2" href="/about">
+        À propos
+      </NavigationItem>,
+      <NavigationItem key="3" href="/contact">
+        Contact
+      </NavigationItem>,
+    ],
   },
   argTypes: {
-
+    children: { table: { disable: true } },
   },
 };
 
