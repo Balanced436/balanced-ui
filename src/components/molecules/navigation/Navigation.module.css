@@ -1,0 +1,9 @@
+.List {
+    display: flex;
+    list-style: none;
+}
+
+.Trigger{
+    padding: 0 0.875rem;
+    text-decoration: none;
+}
