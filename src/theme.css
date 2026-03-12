@@ -1,5 +1,5 @@
-@import "src/components/token/colors.css";
-@import "src/components/token/typography.css";
+@import "/src/components/token/colors.css";
+@import "/src/components/token/typography.css";
 :root {
     /* Couleurs de base du bouton (Mode Clair par défaut) */
     --btn-bg-color: var(--color-gray-50);

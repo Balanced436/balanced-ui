@@ -14,10 +14,12 @@ export default defineConfig({
     })],
   
   build: {
+    cssCodeSplit: false,
     lib: {
       entry: resolve(__dirname, 'src/main.ts'),
       name: 'balanced-ui',
-      fileName: 'balanced-ui',
+      fileName: (format) =>
+        format === 'es' ? 'balanced-ui.js' : 'balanced-ui.umd.cjs',
       formats: ['es', 'umd']
     },
     rollupOptions: {
@@ -30,6 +32,6 @@ export default defineConfig({
           "styled-components": "styled"
         }
       }
-    }
+    },
   }
 })
