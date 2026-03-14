@@ -6,6 +6,8 @@ const meta: Meta<typeof Navigation> = {
   component: Navigation,
   tags: ['autodocs'],
   args: {
+    // Set a default value for the control
+    justify: 'left', 
     children: [
       <NavigationItem key="1" href="/">
         Accueil
@@ -20,6 +22,12 @@ const meta: Meta<typeof Navigation> = {
   },
   argTypes: {
     children: { table: { disable: true } },
+    // Explicitly define the control for the justify prop
+    justify: {
+      control: 'inline-radio',
+      options: ['left', 'center', 'right'],
+      description: 'Aligns the navigation items horizontally',
+    },
   },
 };
 
@@ -28,5 +36,19 @@ export default meta;
 type Story = StoryObj<typeof Navigation>;
 
 export const Standard: Story = {
-  args: {},
+  args: {
+    justify: 'flex-start',
+  },
+};
+
+export const Centered: Story = {
+  args: {
+    justify: 'center',
+  },
+};
+
+export const RightAligned: Story = {
+  args: {
+    justify: 'flex-end',
+  },
 };

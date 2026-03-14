@@ -7,3 +7,19 @@
     padding: 0 0.875rem;
     text-decoration: none;
 }
+
+.Root{
+    width: 100%;
+}
+
+.List[data-justify="flex-start"] {
+  justify-content: flex-start;
+}
+
+.List[data-justify="center"] {
+  justify-content: center;
+}
+
+.List[data-justify="flex-end"] {
+  justify-content: flex-end;
+}
