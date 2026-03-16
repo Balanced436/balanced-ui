@@ -7,7 +7,7 @@ const meta: Meta<typeof Navigation> = {
   tags: ['autodocs'],
   args: {
     // Set a default value for the control
-    justify: 'left', 
+    justify: 'flex-start', 
     children: [
       <NavigationItem key="1" href="/">
         Accueil
@@ -25,7 +25,7 @@ const meta: Meta<typeof Navigation> = {
     // Explicitly define the control for the justify prop
     justify: {
       control: 'inline-radio',
-      options: ['left', 'center', 'right'],
+      options: ['flex-start', 'center', 'flex-end'],
       description: 'Aligns the navigation items horizontally',
     },
   },

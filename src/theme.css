@@ -1,12 +1,24 @@
-@import "/src/components/token/colors.css";
-@import "/src/components/token/typography.css";
+@import '/src/components/token/colors.css';
+@import '/src/components/token/typography.css';
+@import '/src/components/token/size.css';
+
 :root {
-    /* Couleurs de base du bouton (Mode Clair par défaut) */
-    --btn-bg-color: var(--color-gray-50);
-    --btn-txt-color: var(--color-gray-900);
-    --btn-border-color: var(--color-gray-200);
+  --btn-bg-color: var(--color-gray-50);
+  --btn-txt-color: var(--color-gray-900);
+  --btn-border-color: var(--color-gray-200);
+  --btn-bg-hover: var(--color-gray-100);
+  --btn-bg-active: var(--color-gray-200);
 
-    --btn-bg-hover: var(--color-gray-100);
-    --btn-bg-active: var(--color-gray-200);
+  --borderWith-thin: var(--base-size-1) solid;
+  --borderWith-thick: var(--base-size-2) solid;
+  --borderWith-thicker: var(--base-size-4) solid;
+  --borderWith-default: var(--borderWith-thin) solid;
 
+  --stack-gap-condensed: var(--base-size-8);
+  --stack-gap-normal: var(--base-size-16);
+  --stack-gap-spacious: var(--base-size-24);
+
+  --stack-padding-condensed: var(--base-size-8);
+  --stack-padding-normal: var(--base-size-16);
+  --stack-padding-spacious: var(--base-size-24);
 }

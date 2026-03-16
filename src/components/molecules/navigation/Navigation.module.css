@@ -1,25 +1,26 @@
 .List {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
+  gap: var(--stack-gap-spacious);
 }
 
-.Trigger{
-    padding: 0 0.875rem;
-    text-decoration: none;
+.Trigger {
+  text-decoration: none;
 }
 
-.Root{
-    width: 100%;
+.Root {
+  width: 100%;
+  border: var(--borderWith-thin);
 }
 
-.List[data-justify="flex-start"] {
+.List[data-justify='flex-start'] {
   justify-content: flex-start;
 }
 
-.List[data-justify="center"] {
+.List[data-justify='center'] {
   justify-content: center;
 }
 
-.List[data-justify="flex-end"] {
+.List[data-justify='flex-end'] {
   justify-content: flex-end;
 }
