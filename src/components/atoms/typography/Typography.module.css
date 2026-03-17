@@ -1,0 +1,35 @@
+.title-large {
+  font: var(--text-title-shorthand-large);
+}
+
+.title-medium {
+  font: var(--text-title-shorthand-medium);
+}
+
+.title-small {
+  font: var(--text-title-shorthand-small);
+}
+
+.display-large {
+  font: var(--text-display-shorthand);
+}
+
+.subtitle {
+  font: var(--text-subtitle-shorthand);
+}
+
+.caption {
+  font: var(--text-caption-shorthand);
+}
+
+.body-small {
+  font: var(--text-body-shorthand-small);
+}
+
+.body-medium {
+  font: var(--text-body-shorthand-medium);
+}
+
+.body-large {
+  font: var(--text-body-shorthand-large);
+}

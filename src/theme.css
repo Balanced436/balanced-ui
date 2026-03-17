@@ -43,19 +43,36 @@
   --text-title-size-small: var(--base-text-size-md);
   --text-title-weight-small: var(--base-text-weight-semibold);
 
-  --text-subtitle-lineHeight-small: var(--base-text-lineHeight-relaxed);
-  --text-subtitle-size-small: var(--base-text-size-lg);
-  --text-subtitle-weight-small: var(--base-text-weight-normal);
+  --text-subtitle-lineHeight: var(--base-text-lineHeight-relaxed);
+  --text-subtitle-size: var(--base-text-size-lg);
+  --text-subtitle-weight: var(--base-text-weight-normal);
 
-  --text-body-shorthand-large: var(--base-text-weight-normal) var(--text-body-size-large)/var(--text-body-lineHeight-large) var(--fontStack-sansSerif);
-  --text-body-shorthand-medium: var(--base-text-weight-normal) var(--text-body-size-medium)/var(--text-body-lineHeight-medium)
-    var(--fontStack-sansSerif);
-  --text-body-shorthand-small: var(--base-text-weight-normal) var(--text-body-size-small)/var(--text-body-lineHeight-small) var(--fontStack-sansSerif);
+  --text-display-height: var(--base-text-lineHeight-snug);
+  --text-display-lineHeight: var(--base-text-lineHeight-snug);
+  --text-display-size: var(--base-text-size-2xl);
+  --text-display-weight: var(--base-text-weight-medium);
 
-  --text-title-shorthand-large: var(--text-title-weight-large) var(--text-title-size-large)/var(--text-title-lineHeight-large)
+  --text-caption-lineHeight: var(--base-text-lineHeight-tight);
+  --text-caption-size: var(--base-text-size-xs);
+  --text-caption-weight: var(--base-text-weight-normal);
+
+  --text-body-shorthand-large: var(--base-text-weight-normal) var(--text-body-size-large) / var(--text-body-lineHeight-large)
     var(--fontStack-sansSerif);
-  --text-title-shorthand-medium: var(--text-title-weight-medium) var(--text-title-size-medium)/var(--text-title-lineHeight-medium)
+  --text-body-shorthand-medium: var(--base-text-weight-normal) var(--text-body-size-medium) / var(--text-body-lineHeight-medium)
     var(--fontStack-sansSerif);
-  --text-title-shorthand-small: var(--text-title-weight-small) var(--text-title-size-small)/var(--text-title-lineHeight-small)
+  --text-body-shorthand-small: var(--base-text-weight-normal) var(--text-body-size-small) / var(--text-body-lineHeight-small)
     var(--fontStack-sansSerif);
+
+  --text-title-shorthand-large: var(--text-title-weight-large) var(--text-title-size-large) / var(--text-title-lineHeight-large)
+    var(--fontStack-sansSerif);
+  --text-title-shorthand-medium: var(--text-title-weight-medium) var(--text-title-size-medium) / var(--text-title-lineHeight-medium)
+    var(--fontStack-sansSerif);
+  --text-title-shorthand-small: var(--text-title-weight-small) var(--text-title-size-small) / var(--text-title-lineHeight-small)
+    var(--fontStack-sansSerif);
+
+  --text-display-shorthand: var(--text-display-weight) var(--text-display-size) / var(--text-display-lineHeight) var(--fontStack-sansSerif);
+
+  --text-caption-shorthand: var(--text-caption-weight) var(--text-caption-size) / var(--text-caption-lineHeight) var(--fontStack-sansSerif);
+
+  --text-subtitle-shorthand: var(--text-subtitle-weight) var(--text-subtitle-size) / var(--text-subtitle-lineHeight) var(--fontStack-sansSerif);
 }
