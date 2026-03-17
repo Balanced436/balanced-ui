@@ -21,4 +21,41 @@
   --stack-padding-condensed: var(--base-size-8);
   --stack-padding-normal: var(--base-size-16);
   --stack-padding-spacious: var(--base-size-24);
+
+  --text-body-lineHeight-large: var(--base-text-lineHeight-normal);
+  --text-body-size-large: var(--base-text-size-md);
+
+  --text-body-lineHeight-medium: var(--base-text-lineHeight-normal);
+  --text-body-size-medium: var(--base-text-size-sm);
+
+  --text-body-lineHeight-small: var(--base-text-lineHeight-relaxed);
+  --text-body-size-small: var(--base-text-size-xs);
+
+  --text-title-lineHeight-large: var(--base-text-lineHeight-normal);
+  --text-title-size-large: var(--base-text-size-xl);
+  --text-title-weight-large: var(--base-text-weight-semibold);
+
+  --text-title-lineHeight-medium: var(--base-text-lineHeight-relaxed);
+  --text-title-size-medium: var(--base-text-size-lg);
+  --text-title-weight-medium: var(--base-text-weight-semibold);
+
+  --text-title-lineHeight-small: var(--base-text-lineHeight-normal);
+  --text-title-size-small: var(--base-text-size-md);
+  --text-title-weight-small: var(--base-text-weight-semibold);
+
+  --text-subtitle-lineHeight-small: var(--base-text-lineHeight-relaxed);
+  --text-subtitle-size-small: var(--base-text-size-lg);
+  --text-subtitle-weight-small: var(--base-text-weight-normal);
+
+  --text-body-shorthand-large: var(--base-text-weight-normal) var(--text-body-size-large)/var(--text-body-lineHeight-large) var(--fontStack-sansSerif);
+  --text-body-shorthand-medium: var(--base-text-weight-normal) var(--text-body-size-medium)/var(--text-body-lineHeight-medium)
+    var(--fontStack-sansSerif);
+  --text-body-shorthand-small: var(--base-text-weight-normal) var(--text-body-size-small)/var(--text-body-lineHeight-small) var(--fontStack-sansSerif);
+
+  --text-title-shorthand-large: var(--text-title-weight-large) var(--text-title-size-large)/var(--text-title-lineHeight-large)
+    var(--fontStack-sansSerif);
+  --text-title-shorthand-medium: var(--text-title-weight-medium) var(--text-title-size-medium)/var(--text-title-lineHeight-medium)
+    var(--fontStack-sansSerif);
+  --text-title-shorthand-small: var(--text-title-weight-small) var(--text-title-size-small)/var(--text-title-lineHeight-small)
+    var(--fontStack-sansSerif);
 }
