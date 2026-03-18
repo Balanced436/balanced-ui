@@ -1,8 +1,7 @@
 import React from 'react';
-
 import Styles from './Typography.module.css';
 
-type TypographyVariant =
+export type TypographyVariant =
   | 'display'
   | 'title-large'
   | 'title-medium'
@@ -25,13 +24,20 @@ const variantMapping: Record<TypographyVariant, React.ElementType> = {
   caption: 'span',
 };
 
-interface TypographyProps {
-  variant: TypographyVariant;
+interface TypographyProps extends React.HTMLAttributes<HTMLElement> {
+  variant?: TypographyVariant;
+  as?: React.ElementType;
   children: React.ReactNode;
 }
 
-export function Typography({ variant = 'body-medium', children }: TypographyProps) {
-  const Component = variantMapping[variant];
+export function Typography({ variant = 'body-medium', as, children, className, ...rest }: TypographyProps) {
+  const Component = as || variantMapping[variant] || 'p';
 
-  return <Component className={Styles[variant]}>{children}</Component>;
+  const combinedClasses = [Styles[variant], className].filter(Boolean).join(' ');
+
+  return (
+    <Component className={combinedClasses} {...rest}>
+      {children}
+    </Component>
+  );
 }
