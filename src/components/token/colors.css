@@ -1,33 +1,32 @@
 :root {
-  --color-blue: oklch(45% 50% 264deg);
-  --color-red: oklch(50% 55% 31deg);
-
-  --color-gray-50: oklch(98% 0.25% 264deg);
-  --color-gray-100: oklch(12% 9.5% 264deg / 5%);
-  --color-gray-200: oklch(12% 9% 264deg / 7%);
-  --color-gray-200: oklch(12% 9% 264deg / 15%);
-  --color-gray-400: oklch(12% 8% 264deg / 38%);
-  --color-gray-500: oklch(12% 7.5% 264deg / 50%);
-  --color-gray-600: oklch(12% 7% 264deg / 67%);
-  --color-gray-700: oklch(12% 6% 264deg / 77%);
-  --color-gray-800: oklch(12% 5% 264deg / 85%);
-  --color-gray-900: oklch(12% 5% 264deg / 90%);
-  --color-gray-950: oklch(12% 5% 264deg / 95%);
-
+  --base-color-neutral-0: oklch(100% 0 0);
+  --base-color-neutral-1: oklch(97.7% 0.005 255);
+  --base-color-neutral-2: oklch(95.6% 0.006 255);
+  --base-color-neutral-3: oklch(93.1% 0.01 255);
+  --base-color-neutral-4: oklch(91.5% 0.011 255);
+  --base-color-neutral-5: oklch(89.8% 0.013 255);
+  --base-color-neutral-6: oklch(87.3% 0.016 255);
+  --base-color-neutral-7: oklch(84.7% 0.018 255);
+  --base-color-neutral-8: oklch(62.3% 0.024 255);
+  --base-color-neutral-9: oklch(48.2% 0.024 255);
+  --base-color-neutral-10: oklch(39.9% 0.019 255);
+  --base-color-neutral-11: oklch(34.7% 0.017 255);
+  --base-color-neutral-12: oklch(25.4% 0.013 255);
+  --base-color-neutral-13: oklch(22.1% 0.012 255);
   @media (prefers-color-scheme: dark) {
-    --color-blue: oklch(69% 50% 264deg);
-    --color-red: oklch(80% 55% 31deg);
-
-    --color-gray-50: oklch(17% 0.25% 264deg);
-    --color-gray-100: oklch(28% 0.75% 264deg / 65%);
-    --color-gray-200: oklch(29% 0.75% 264deg / 80%);
-    --color-gray-300: oklch(35% 0.75% 264deg / 80%);
-    --color-gray-400: oklch(47% 0.875% 264deg / 80%);
-    --color-gray-500: oklch(64% 1% 264deg / 80%);
-    --color-gray-600: oklch(82% 1% 264deg / 80%);
-    --color-gray-700: oklch(92% 1.125% 264deg / 80%);
-    --color-gray-800: oklch(93% 0.875% 264deg / 85%);
-    --color-gray-900: oklch(95% 0.5% 264deg / 90%);
-    --color-gray-950: oklch(94% 0.375% 264deg / 95%);
+    --base-color-neutral-0: oklch(18% 0.012 255);
+    --base-color-neutral-1: oklch(22% 0.013 255);
+    --base-color-neutral-2: oklch(26% 0.014 255);
+    --base-color-neutral-3: oklch(30% 0.015 255);
+    --base-color-neutral-4: oklch(35% 0.016 255);
+    --base-color-neutral-5: oklch(40% 0.017 255);
+    --base-color-neutral-6: oklch(45% 0.018 255);
+    --base-color-neutral-7: oklch(55% 0.02 255);
+    --base-color-neutral-8: oklch(65% 0.018 255);
+    --base-color-neutral-9: oklch(75% 0.015 255);
+    --base-color-neutral-10: oklch(85% 0.01 255);
+    --base-color-neutral-11: oklch(92% 0.007 255);
+    --base-color-neutral-12: oklch(96% 0.004 255);
+    --base-color-neutral-13: oklch(99% 0.002 255);
   }
 }
