@@ -3,7 +3,7 @@ import type { ButtonHTMLAttributes, ReactNode, JSX } from 'react';
 
 import styles from './Button.module.css';
 
-type Variant = 'primary' | 'secondary';
+type Variant = 'primary' | 'default' | 'danger' | 'invisible';
 type Size = 'small' | 'medium' | 'large';
 
 interface MyButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -12,9 +12,9 @@ interface MyButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: Size;
 }
 
-export const Button = ({ children, variant = 'primary', size = 'small', ...props }: MyButtonProps): JSX.Element => {
+export const Button = ({ children, variant = 'default', size = 'medium', disabled = false, ...props }: MyButtonProps): JSX.Element => {
   return (
-    <BaseButton {...props} className={[styles.Button, styles[`variant_${variant}`], styles[`size_${size}`]].join(' ')}>
+    <BaseButton {...props} data-disabled={disabled} className={[styles.Button, styles[`${variant}`], styles[`${size}`]].join(' ')}>
       {children}
     </BaseButton>
   );
