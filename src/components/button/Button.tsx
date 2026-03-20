@@ -10,11 +10,17 @@ interface MyButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   variant?: Variant;
   size?: Size;
+  href?: string;
 }
 
-export const Button = ({ children, variant = 'default', size = 'medium', disabled = false, ...props }: MyButtonProps): JSX.Element => {
+export const Button = ({ children, variant = 'default', size = 'medium', disabled = false, href, ...props }: MyButtonProps): JSX.Element => {
   return (
-    <BaseButton {...props} data-disabled={disabled} className={[styles.Button, styles[`${variant}`], styles[`${size}`]].join(' ')}>
+    <BaseButton
+      {...props}
+      render={href ? <a href={href} /> : undefined}
+      data-disabled={disabled}
+      className={[styles.Button, styles[`${variant}`], styles[`${size}`]].join(' ')}
+    >
       {children}
     </BaseButton>
   );

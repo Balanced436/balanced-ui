@@ -10,7 +10,7 @@
 
 .Root {
   width: 100%;
-  border: var(--borderWith-thin);
+  /*border: var(--borderWith-thin);*/
 }
 
 .List[data-justify='flex-start'] {
