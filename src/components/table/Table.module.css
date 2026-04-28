@@ -1,0 +1,8 @@
+.Table {
+    border: var(--borderWith-thin);
+    border-radius: var(--borderRadius-large);
+    /*padding: 0px var(--stack-gap-normal);*/
+    font: var(--text-body-shorthand-medium);
+    border-spacing: 0px;
+    overflow: scroll
+}

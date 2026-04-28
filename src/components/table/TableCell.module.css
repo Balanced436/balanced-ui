@@ -1,0 +1,4 @@
+.TableCell {
+    padding: var(--stack-padding-normal);
+    border-bottom: 1px solid black;
+}

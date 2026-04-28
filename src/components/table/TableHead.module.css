@@ -1,0 +1,5 @@
+.TableHead {
+    font: var(--text-body-shorthand-medium);
+    font-weight: var(--base-text-weight-medium);
+    border: 1px solid rgb(125, 125, 125);
+}
