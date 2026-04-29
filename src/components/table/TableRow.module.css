@@ -1,1 +1,3 @@
-.TableRow {}
+tbody .TableRow:hover {
+    background-color: var(--tableRow-bgColor-hover) ;
+}

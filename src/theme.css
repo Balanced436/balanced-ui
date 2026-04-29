@@ -142,4 +142,7 @@
   /* Table header */
   --table-default-header-bgColor: var(--base-color-neutral-1);
   --table-default-header-fgColor: var(--base-color-neutral-9);
+
+  /* Table row hover*/
+  --tableRow-bgColor-hover: var(--base-color-neutral-1);
 }
