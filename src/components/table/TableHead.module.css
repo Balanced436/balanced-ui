@@ -1,7 +1,6 @@
 .TableHead {
-    font: var(--text-body-shorthand-medium);
-    font-weight: var(--base-text-weight-medium);
-    background-color: var(--table-default-header-bgColor);
-    color: var(--table-default-header-fgColor);
-
+  font: var(--text-body-shorthand-medium);
+  font-weight: var(--base-text-weight-medium);
+  background-color: var(--table-default-header-bgColor);
+  color: var(--table-default-header-fgColor);
 }

@@ -11,7 +11,7 @@ const ColorGrid = ({ title, prefix }: ColorGridProps) => {
 
   return (
     <div style={{ marginBottom: '3rem' }}>
-      <Typography variant='title-large' style={{ marginBottom: '1.5rem', display: 'block' }}>
+      <Typography variant="title-large" style={{ marginBottom: '1.5rem', display: 'block' }}>
         {title}
       </Typography>
 
@@ -20,18 +20,18 @@ const ColorGrid = ({ title, prefix }: ColorGridProps) => {
           const varName = `--base-color-${prefix}-${step}`;
           return (
             <div key={step} style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-              <div style={{
-                width: '120px',
-                height: '48px',
-                borderRadius: '4px',
-                backgroundColor: `var(${varName})`,
-                border: '1px solid rgba(128,128,128,0.2)'
-              }} />
+              <div
+                style={{
+                  width: '120px',
+                  height: '48px',
+                  borderRadius: '4px',
+                  backgroundColor: `var(${varName})`,
+                  border: '1px solid rgba(128,128,128,0.2)',
+                }}
+              />
               <div style={{ flex: 1 }}>
                 <code style={{ fontWeight: 'bold', fontSize: '0.9rem' }}>{varName}</code>
-                <div style={{ fontSize: '0.75rem', opacity: 0.6 }}>
-                  Step {step}
-                </div>
+                <div style={{ fontSize: '0.75rem', opacity: 0.6 }}>Step {step}</div>
               </div>
             </div>
           );
@@ -44,7 +44,7 @@ const ColorGrid = ({ title, prefix }: ColorGridProps) => {
 const meta: Meta = {
   title: 'Tokens/Colors',
   component: () => (
-    <div style={{ padding: '2rem' }}>
+    <div style={{ display: 'flex', flexDirection: 'row', gap: '3rem' }}>
       <ColorGrid title="Neutral Palette" prefix="neutral" />
       <ColorGrid title="Green Palette" prefix="green" />
       <ColorGrid title="Red Palette" prefix="red" />

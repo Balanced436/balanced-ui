@@ -4,20 +4,14 @@ import { Typography } from '../src/main';
 const PLACEHOLDER = 'Lorem ipsum dolor sit amet';
 
 const meta: Meta<typeof Typography> = {
-  title: 'Components/Typography',
+  title: 'Tokens/Typography',
   component: Typography,
   tags: ['autodocs'],
   argTypes: {
     variant: {
       control: 'select',
       description: 'The visual style of the text',
-      options: [
-        'display', 
-        'title-large', 'title-medium', 'title-small',
-        'subtitle',
-        'body-large', 'body-medium', 'body-small',
-        'caption'
-      ],
+      options: ['display', 'title-large', 'title-medium', 'title-small', 'subtitle', 'body-large', 'body-medium', 'body-small', 'caption'],
     },
   },
   args: {
@@ -28,11 +22,9 @@ const meta: Meta<typeof Typography> = {
 export default meta;
 type Story = StoryObj<typeof Typography>;
 
-
 export const Display: Story = {
   args: { variant: 'display' },
 };
-
 
 export const TitleLarge: Story = {
   args: { variant: 'title-large' },
@@ -46,11 +38,9 @@ export const TitleSmall: Story = {
   args: { variant: 'title-small' },
 };
 
-
 export const SubTitle: Story = {
   args: { variant: 'subtitle' },
 };
-
 
 export const BodyLarge: Story = {
   args: { variant: 'body-large' },
@@ -64,11 +54,9 @@ export const BodySmall: Story = {
   args: { variant: 'body-small' },
 };
 
-
 export const Caption: Story = {
   args: { variant: 'caption' },
 };
-
 
 export const AllVariants: Story = {
   render: () => (

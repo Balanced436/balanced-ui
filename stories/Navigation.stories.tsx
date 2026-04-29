@@ -2,12 +2,12 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Navigation, NavigationItem } from '../src/main';
 
 const meta: Meta<typeof Navigation> = {
-  title: 'UI/Molecules/Navigation',
+  title: 'Tokens/Navigation',
   component: Navigation,
   tags: ['autodocs'],
   args: {
     // Set a default value for the control
-    justify: 'flex-start', 
+    justify: 'flex-start',
     children: [
       <NavigationItem key="1" href="/">
         Accueil
