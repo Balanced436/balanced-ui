@@ -144,6 +144,11 @@
   --table-default-border-color: var(--base-color-neutral-7);
   --table-default-border-radius: var(--borderRadius-small);
 
+  /* Table cell density */
+  --table-cell-padding-condensed: var(--base-size-4) var(--base-size-8);
+  --table-cell-padding-normal: var(--base-size-8) var(--base-size-16);
+  --table-cell-padding-spacious: var(--base-size-16) var(--base-size-24);
+
   /* Table header */
   --table-default-header-bgColor: var(--base-color-neutral-1);
   --table-default-header-fgColor: var(--base-color-neutral-9);

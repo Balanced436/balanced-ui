@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Table } from '../src/components/table/table';
+import { Table } from '../src/components/table/Table';
 import { TableBody } from '../src/components/table/TableBody';
 import { TableCell } from '../src/components/table/TableCell';
 import { TableHead } from '../src/components/table/TableHead';
@@ -36,9 +36,9 @@ export default meta;
 
 type Story = StoryObj<TableStoryArgs>;
 
-export const Default: Story = {
+export const Condensed: Story = {
   render: ({ rowCount, columnCount, ...args }) => (
-    <Table {...args}>
+    <Table density={"condensed"} {...args}>
       <TableHead>
         <TableRow>
           {Array.from({ length: columnCount }).map((_, i) => (
@@ -60,3 +60,56 @@ export const Default: Story = {
     </Table>
   ),
 };
+
+export const normal: Story = {
+  render: ({ rowCount, columnCount, ...args }) => (
+    <Table density={"normal"} {...args}>
+      <TableHead>
+        <TableRow>
+          {Array.from({ length: columnCount }).map((_, i) => (
+            <TableCell key={i}>Header {i + 1}</TableCell>
+          ))}
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        {Array.from({ length: rowCount }).map((_, rowIndex) => (
+          <TableRow key={rowIndex}>
+            {Array.from({ length: columnCount }).map((_, colIndex) => (
+              <TableCell key={colIndex}>
+                Row {rowIndex + 1} Cell {colIndex + 1}
+              </TableCell>
+            ))}
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
+  ),
+};
+
+
+
+export const Spacious: Story = {
+  render: ({ rowCount, columnCount, ...args }) => (
+    <Table density={"spacious"} {...args}>
+      <TableHead>
+        <TableRow>
+          {Array.from({ length: columnCount }).map((_, i) => (
+            <TableCell key={i}>Header {i + 1}</TableCell>
+          ))}
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        {Array.from({ length: rowCount }).map((_, rowIndex) => (
+          <TableRow key={rowIndex}>
+            {Array.from({ length: columnCount }).map((_, colIndex) => (
+              <TableCell key={colIndex}>
+                Row {rowIndex + 1} Cell {colIndex + 1}
+              </TableCell>
+            ))}
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
+  ),
+};
+

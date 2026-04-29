@@ -7,3 +7,16 @@
   border-spacing: 0px;
   overflow: hidden;
 }
+.Table {
+  & td {
+    padding: var(--table-cell-padding-normal);
+  }
+
+  &[data-density='condensed'] td {
+    padding: var(--table-cell-padding-condensed);
+  }
+
+  &[data-density='spacious'] td {
+    padding: var(--table-cell-padding-spacious);
+  }
+}
