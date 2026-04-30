@@ -1,7 +1,8 @@
 {
+  "author": "I.SAID <ismael.saidpro@protonmail.com>",
   "name": "balanced-ui",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.1",
   "type": "module",
   "files": ["dist"],
   "main": "./dist/balanced-ui.umd.cjs",
