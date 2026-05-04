@@ -11,3 +11,4 @@ export { TableHead } from './components/table/TableHead.tsx';
 export { TableBody } from './components/table/TableBody.tsx';
 export { TableRow } from './components/table/TableRow.tsx';
 export { TableCell } from './components/table/TableCell.tsx';
+export { Card } from './components/card/Card.tsx';
