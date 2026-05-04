@@ -19,8 +19,8 @@ type Story = StoryObj<typeof Card>;
 export const Default: Story = {
   render: (args) => (
     <Card {...args}>
-      <Card.Title onClick={(e) => console.info(e)}>CPU Usage</Card.Title>
-      <Card.SubTitle>Overvview</Card.SubTitle>
+      <Card.Title>CPU Usage</Card.Title>
+      <Card.SubTitle>Overview</Card.SubTitle>
       <Card.Body>The CPU usage is currently at 12%. The server is running smoothly without any interruptions.</Card.Body>
       <Card.Footer>Last updated: 2 minutes ago</Card.Footer>
     </Card>
