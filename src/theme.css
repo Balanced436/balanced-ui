@@ -38,7 +38,7 @@
   --text-title-weight-small: var(--base-text-weight-semibold);
 
   --text-subtitle-lineHeight: var(--base-text-lineHeight-relaxed);
-  --text-subtitle-size: var(--base-text-size-lg);
+  --text-subtitle-size: var(--base-text-size-md);
   --text-subtitle-weight: var(--base-text-weight-normal);
 
   --text-display-height: var(--base-text-lineHeight-snug);
