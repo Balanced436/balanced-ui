@@ -38,7 +38,7 @@ type Story = StoryObj<TableStoryArgs>;
 
 export const Condensed: Story = {
   render: ({ rowCount, columnCount, ...args }) => (
-    <Table density={"condensed"} {...args}>
+    <Table density={'condensed'} {...args}>
       <TableHead>
         <TableRow>
           {Array.from({ length: columnCount }).map((_, i) => (
@@ -63,7 +63,7 @@ export const Condensed: Story = {
 
 export const normal: Story = {
   render: ({ rowCount, columnCount, ...args }) => (
-    <Table density={"normal"} {...args}>
+    <Table density={'normal'} {...args}>
       <TableHead>
         <TableRow>
           {Array.from({ length: columnCount }).map((_, i) => (
@@ -85,12 +85,10 @@ export const normal: Story = {
     </Table>
   ),
 };
-
-
 
 export const Spacious: Story = {
   render: ({ rowCount, columnCount, ...args }) => (
-    <Table density={"spacious"} {...args}>
+    <Table density={'spacious'} {...args}>
       <TableHead>
         <TableRow>
           {Array.from({ length: columnCount }).map((_, i) => (
@@ -112,4 +110,3 @@ export const Spacious: Story = {
     </Table>
   ),
 };
-

@@ -1,16 +1,16 @@
-.card{
-    width: 400px;
-    border: var(--borderWith-thin);
-    border-color: lightgray;
-    border-radius: var(--borderRadius-large);
-    padding: 10px;
+.card {
+  width: 400px;
+  border: var(--borderWith-thin);
+  border-color: lightgray;
+  border-radius: var(--borderRadius-large);
+  padding: 10px;
 }
 
-.subtitle{
-    color: gray;
-    margin: 0px;
+.subtitle {
+  color: gray;
+  margin: 0px;
 }
 
-.title{
-    margin: 0px;
+.title {
+  margin: 0px;
 }
