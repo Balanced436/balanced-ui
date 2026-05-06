@@ -12,8 +12,13 @@
   width: 100%;
   /*border: var(--borderWith-thin);*/
 
-  &[data-fixed='true'] {
+  &[data-position='fixed'] {
     position: fixed;
+  }
+
+  &[data-orientation='vertical'] .List {
+    display: flex;
+    flex-direction: column;
   }
 }
 

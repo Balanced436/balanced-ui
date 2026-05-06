@@ -38,17 +38,23 @@ type Story = StoryObj<typeof Navigation>;
 export const Standard: Story = {
   args: {
     justify: 'flex-start',
+    position: 'relative',
+    orientation: 'horizontal',
   },
 };
 
 export const Centered: Story = {
   args: {
     justify: 'center',
+    position: 'relative',
+    orientation: 'horizontal',
   },
 };
 
 export const RightAligned: Story = {
   args: {
     justify: 'flex-end',
+    position: 'relative',
+    orientation: 'horizontal',
   },
 };
