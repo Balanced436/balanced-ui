@@ -6,11 +6,12 @@ import { Button } from '../../main.ts';
 interface NavigationProps {
   children: React.ReactNode;
   justify?: 'flex-start' | 'center' | 'flex-end';
+  fixed: false;
 }
 
-export function Navigation({ children, justify = 'flex-start' }: NavigationProps) {
+export function Navigation({ children, justify = 'flex-start', fixed }: NavigationProps) {
   return (
-    <NavigationMenu.Root className={styles.Root}>
+    <NavigationMenu.Root data-fixed={fixed} className={styles.Root}>
       <NavigationMenu.List className={styles.List} data-justify={justify}>
         {children}
       </NavigationMenu.List>

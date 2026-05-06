@@ -11,6 +11,10 @@
 .Root {
   width: 100%;
   /*border: var(--borderWith-thin);*/
+
+  &[data-fixed='true'] {
+    position: fixed;
+  }
 }
 
 .List[data-justify='flex-start'] {
