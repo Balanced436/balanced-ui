@@ -1,0 +1,41 @@
+.List {
+  display: flex;
+  list-style: none;
+  gap: var(--stack-gap-spacious);
+}
+
+.Trigger {
+  text-decoration: none;
+}
+
+.Root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+
+  /*border: var(--borderWith-thin);*/
+  position: fixed;
+
+}
+
+.List[data-justify='flex-start'] {
+  justify-content: flex-start;
+}
+
+.List[data-justify='center'] {
+  justify-content: center;
+}
+
+.List[data-justify='flex-end'] {
+  justify-content: flex-end;
+}
+
+.List{
+  display: flex;
+  flex-direction: column;
+}
