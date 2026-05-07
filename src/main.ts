@@ -12,4 +12,4 @@ export { TableBody } from './components/table/TableBody.tsx';
 export { TableRow } from './components/table/TableRow.tsx';
 export { TableCell } from './components/table/TableCell.tsx';
 export { Card } from './components/card/Card.tsx';
-export { SideBar } from './components/sidebar/SideBar.tsx';
+export { SideBar, SideBarItem } from './components/sidebar/SideBar.tsx';
