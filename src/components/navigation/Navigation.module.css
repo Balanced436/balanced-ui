@@ -11,15 +11,13 @@
 .Root {
   width: 100%;
   /*border: var(--borderWith-thin);*/
-
+  background-color: white;
   &[data-position='fixed'] {
     position: fixed;
+    top: 0;
+    left: 0;
   }
 
-  &[data-orientation='vertical'] .List {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 .List[data-justify='flex-start'] {

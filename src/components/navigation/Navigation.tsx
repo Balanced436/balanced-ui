@@ -3,16 +3,15 @@ import { NavigationMenu } from '@base-ui/react/navigation-menu';
 import styles from './Navigation.module.css';
 import { Button } from '../../main.ts';
 
-interface NavigationProps {
-  children: React.ReactNode;
+interface NavigationProps extends React.HTMLProps<HTMLDivElement> {
+  children?: React.ReactNode;
   justify?: 'flex-start' | 'center' | 'flex-end';
-  position: 'relative' | 'fixed';
-  orientation?: 'horizontal' | 'vertical';
+  position?: 'relative' | 'fixed';
 }
 
-export function Navigation({ children, justify = 'flex-start', position = 'fixed', orientation = 'horizontal' }: NavigationProps) {
+export function Navigation({ children, justify = 'flex-start', position = 'fixed', className, style}: NavigationProps) {
   return (
-    <NavigationMenu.Root data-position={position} data-orientation={orientation} className={styles.Root}>
+    <NavigationMenu.Root data-position={position}  className={`${styles.Root} ${className}`.trim()} style={style}>
       <NavigationMenu.List className={styles.List} data-justify={justify}>
         {children}
       </NavigationMenu.List>
