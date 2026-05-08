@@ -13,6 +13,8 @@
     display: flex;
     justify-content: flex-end;
   }
+
+  padding: 0px;
 }
 
 .Trigger {
@@ -20,6 +22,7 @@
 }
 
 .Root {
+  border-right: var(--borderWith-thin) #f3f3f3;
   position: fixed;
   top: 0;
   left: 0;

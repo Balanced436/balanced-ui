@@ -9,9 +9,9 @@ interface NavigationProps extends React.HTMLProps<HTMLDivElement> {
   position?: 'relative' | 'fixed';
 }
 
-export function Navigation({ children, justify = 'flex-start', position = 'fixed', className, style}: NavigationProps) {
+export function Navigation({ children, justify = 'flex-start', position = 'fixed', className, style }: NavigationProps) {
   return (
-    <NavigationMenu.Root data-position={position}  className={`${styles.Root} ${className}`.trim()} style={style}>
+    <NavigationMenu.Root data-position={position} className={`${styles.Root} ${className}`.trim()} style={style}>
       <NavigationMenu.List className={styles.List} data-justify={justify}>
         {children}
       </NavigationMenu.List>
