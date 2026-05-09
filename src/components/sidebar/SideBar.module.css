@@ -22,7 +22,7 @@
 }
 
 .Root {
-  border-right: var(--borderWith-thin) #f3f3f3;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -30,7 +30,6 @@
   flex-direction: column;
   width: 300px;
   height: 100%;
-  background-color: white;
 
   /*border: var(--borderWith-thin);*/
   position: fixed;

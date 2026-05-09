@@ -10,7 +10,7 @@
 
 .Root {
   width: 100%;
-  /*border: var(--borderWith-thin);*/
+  border-bottom: var(--borderWith-thin) #efefef;
   background-color: white;
   &[data-position='fixed'] {
     position: fixed;
