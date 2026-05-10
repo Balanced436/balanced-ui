@@ -30,9 +30,11 @@
   },
   "dependencies": {
     "@base-ui/react": "^1.2.0",
+    "fumadocs-docgen": "^3.0.10",
     "prettier": "^3.6.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "remark-gfm": "^4.0.1",
     "styled-components": "^6.1.18",
     "vite-plugin-dts": "^4.5.4",
     "vite-tsconfig-paths": "^5.1.4"
