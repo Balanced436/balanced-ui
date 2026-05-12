@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Navigation, NavigationItem } from '../src/main';
+import { Navigation, NavigationItem } from '../main.ts';
 
 const meta: Meta<typeof Navigation> = {
   title: 'Components/Navigation',

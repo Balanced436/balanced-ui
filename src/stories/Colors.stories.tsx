@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Typography } from '../src/main';
+import { Typography } from '../main.ts';
 
 interface ColorGridProps {
   title: string;

@@ -1,10 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button, Typography } from '../src/main';
+import { Button, Typography } from '../main.ts';
 
 const meta: Meta<typeof Button> = {
   title: 'components/Button',
   component: Button,
-  tags: ['autodocs'],
   args: {
     children: 'Cliquez ici',
   },
@@ -25,6 +24,10 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Showcase: Story = {
+  args: {
+    variant: 'invisible',
+  },
+
   render: (args) => {
     const variants = ['default', 'primary', 'danger', 'invisible'] as const;
     const sizes = ['small', 'medium', 'large'] as const;
