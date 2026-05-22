@@ -1,5 +1,5 @@
 import styles from './SideBar.module.css';
-import { Button } from '../../main.ts';
+import { Button, Typography } from '../../main.ts';
 import * as React from 'react';
 import { NavigationMenu } from '@base-ui/react/navigation-menu';
 
@@ -8,7 +8,7 @@ interface SideBarProps extends React.HTMLProps<HTMLDivElement> {
   justify?: 'flex-start' | 'center' | 'flex-end';
 }
 
-export function SideBar({ children, justify = 'flex-start', className, style }: SideBarProps) {
+export const SideBar = ({ children, justify = 'flex-start', className, style }: SideBarProps) => {
   return (
     <NavigationMenu.Root className={`${styles.Root} ${className}`.trim()} style={style}>
       <NavigationMenu.List className={styles.List} data-justify={justify}>
@@ -16,14 +16,28 @@ export function SideBar({ children, justify = 'flex-start', className, style }: 
       </NavigationMenu.List>
     </NavigationMenu.Root>
   );
-}
+};
 
-export function SideBarItem({ href, children }: { href: string; children: React.ReactNode }) {
+const SideBarSection = ({ children, title }: { children: React.ReactNode; title: string }) => {
   return (
-    <NavigationMenu.Item>
+    <NavigationMenu.Item className={styles.SectionContainer}>
+      <Typography variant={'title-small'} className={styles.SectionTitle}>
+        {title}
+      </Typography>
+      <ul className={styles.SectionSubList}>{children}</ul>
+    </NavigationMenu.Item>
+  );
+};
+
+const SideBarItem = ({ href, children }: { href: string; children: React.ReactNode }) => {
+  return (
+    <NavigationMenu.Item className={styles.Item}>
       <Button variant={'invisible'} href={href}>
         {children}
       </Button>
     </NavigationMenu.Item>
   );
-}
+};
+
+SideBar.Section = SideBarSection;
+SideBar.Item = SideBarItem;
