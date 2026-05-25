@@ -1,5 +1,5 @@
 import { Button as BaseButton } from '@base-ui/react/button';
-import type { ButtonHTMLAttributes, ReactNode, JSX } from 'react';
+import type { ButtonHTMLAttributes, ReactNode, JSX, CSSProperties } from 'react';
 
 import styles from './Button.module.css';
 
@@ -11,15 +11,17 @@ interface MyButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: Variant;
   size?: Size;
   href?: string;
+  style?: CSSProperties;
 }
 
-export const Button = ({ children, variant = 'default', size = 'medium', disabled = false, href, ...props }: MyButtonProps): JSX.Element => {
+export const Button = ({ children, variant = 'default', size = 'medium', disabled = false, href, style, ...props }: MyButtonProps): JSX.Element => {
   return (
     <BaseButton
       {...props}
       render={href ? <a href={href} /> : undefined}
       data-disabled={disabled}
-      className={[styles.Button, styles[`${variant}`], styles[`${size}`]].join(' ')}
+      className={[styles.Button, styles[variant], styles[size]].join(' ')}
+      style={style}
     >
       {children}
     </BaseButton>

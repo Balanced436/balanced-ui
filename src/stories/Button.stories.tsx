@@ -16,6 +16,9 @@ const meta: Meta<typeof Button> = {
       options: ['primary', 'danger', 'invisible'],
       control: { type: 'select' },
     },
+    href: {
+      control: {type: "text"}
+    }
   },
 };
 
@@ -76,4 +79,8 @@ export const Danger: Story = {
 
 export const Invisible: Story = {
   args: { variant: 'invisible' },
+};
+
+export const Href: Story = {
+  args: { href: "/home" },
 };

@@ -33,6 +33,7 @@
     border-color: var(--button-default-borderColor-disabled);
     color: var(--button-default-fgColor-disabled);
   }
+    text-decoration: none;
 }
 
 .primary {
