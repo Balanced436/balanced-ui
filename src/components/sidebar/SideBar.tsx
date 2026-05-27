@@ -21,7 +21,7 @@ export const SideBar = ({ children, justify = 'flex-start', className, style }: 
 const SideBarSection = ({ children, title }: { children: React.ReactNode; title: string }) => {
   return (
     <NavigationMenu.Item className={styles.SectionContainer}>
-      <Typography variant={'title-small'} className={styles.SectionTitle}>
+      <Typography as={'span'} className={styles.SectionTitle}>
         {title}
       </Typography>
       <ul className={styles.SectionSubList}>{children}</ul>
