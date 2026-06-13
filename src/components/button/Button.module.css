@@ -4,6 +4,7 @@
   justify-content: center;
   height: var(--control-medium-size);
   padding: 0 var(--stack-gap-normal);
+  gap: var(--base-size-1);
   margin: 0;
   outline: 0;
   border: var(--borderWith-thin);
@@ -33,7 +34,8 @@
     border-color: var(--button-default-borderColor-disabled);
     color: var(--button-default-fgColor-disabled);
   }
-    text-decoration: none;
+
+  text-decoration: none;
 }
 
 .primary {

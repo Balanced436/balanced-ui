@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button, Typography } from '../main.ts';
+import { FaBeer } from 'react-icons/fa';
+import { IoMdClose } from 'react-icons/io';
 
 const meta: Meta<typeof Button> = {
   title: 'components/Button',
@@ -17,8 +19,8 @@ const meta: Meta<typeof Button> = {
       control: { type: 'select' },
     },
     href: {
-      control: {type: "text"}
-    }
+      control: { type: 'text' },
+    },
   },
 };
 
@@ -82,5 +84,37 @@ export const Invisible: Story = {
 };
 
 export const Href: Story = {
-  args: { href: "/home" },
+  args: { href: '/home' },
+};
+
+export const LeftIcon: Story = {
+  render: (args) => {
+    return (
+      <div>
+        <Button leftIcon={<FaBeer />}>Beer</Button>
+      </div>
+    );
+  },
+};
+
+export const RightIcon: Story = {
+  render: (args) => {
+    return (
+      <div>
+        <Button variant={'danger'} rightIcon={<IoMdClose />}>
+          Close
+        </Button>
+      </div>
+    );
+  },
+};
+
+export const Icon: Story = {
+  render: (args) => {
+    return (
+      <div>
+        <Button aria-label={'close button'} variant={'danger'} icon={<IoMdClose />}></Button>
+      </div>
+    );
+  },
 };
