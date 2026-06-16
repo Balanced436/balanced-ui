@@ -14,3 +14,4 @@ export { TableCell } from './components/table/TableCell.tsx';
 export { Card } from './components/card/Card.tsx';
 export { SideBar } from './components/sidebar/SideBar.tsx';
 export { Code } from './components/code/Code.tsx';
+export { Tabs } from './components/tabs/Tabs.tsx';

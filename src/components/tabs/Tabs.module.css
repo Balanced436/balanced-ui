@@ -1,0 +1,25 @@
+.Root {
+    display: flex;
+    flex-direction: column;
+    gap: var(--stack-gap-normal);
+}
+
+.List {
+    display: flex;
+    position: relative;
+}
+
+.Indicator {
+}
+
+.Panel {
+    border: var(--borderWith-thin);
+    border-color: var(--base-color-neutral-6);
+    padding: var(--stack-gap-condensed);
+    border-radius: var(--borderRadius-large);
+    overflow-y: auto;
+
+    &[hidden] {
+        display: none;
+    }
+}
