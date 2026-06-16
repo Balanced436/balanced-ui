@@ -11,7 +11,12 @@ interface CodeProps {
 
 export const Code = ({ children, language }: CodeProps) => {
   return (
-    <SyntaxHighlighter language={language} style={vs} showLineNumbers customStyle={{ width: '100%', boxSizing: 'border-box', margin: 0 }}>
+    <SyntaxHighlighter
+      language={language}
+      style={vs}
+      showLineNumbers
+      customStyle={{ width: '100%', boxSizing: 'border-box', margin: 0, border: 0, padding: 0, height: '100%' }}
+    >
       {children}
     </SyntaxHighlighter>
   );
