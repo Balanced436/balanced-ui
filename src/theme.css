@@ -73,6 +73,7 @@
   --borderRadius-small: var(--base-size-2);
   --borderRadius-medium: var(--base-size-4);
   --borderRadius-large: var(--base-size-8);
+  --borderRadius-circle: 50%;
 
   /* Button neutral */
   --button-default-bgColor-rest: var(--base-color-neutral-1);

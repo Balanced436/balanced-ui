@@ -1,0 +1,17 @@
+.spinner {
+    width: var(--control-small-size);
+    height: var(--control-small-size);
+    border: var(--borderWith-thicker) var(--base-color-neutral-1);
+    border-top: var(--borderWith-thicker) var(--base-color-neutral-10);
+    border-radius: var(--borderRadius-circle);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
