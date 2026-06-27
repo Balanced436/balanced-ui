@@ -2,6 +2,7 @@ import { Button as BaseButton } from '@base-ui/react/button';
 import type { ButtonHTMLAttributes, CSSProperties, JSX, ReactNode } from 'react';
 
 import styles from './Button.module.css';
+import { Spinner } from '../../main.ts';
 
 type Variant = 'primary' | 'default' | 'danger' | 'invisible';
 type Size = 'small' | 'medium' | 'large';
@@ -15,6 +16,7 @@ interface MyButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: Size;
   href?: string;
   style?: CSSProperties;
+  loading: boolean;
 }
 
 export const Button = ({
@@ -27,33 +29,64 @@ export const Button = ({
   leftIcon,
   rightIcon,
   icon,
+  loading = false,
   ...props
 }: MyButtonProps): JSX.Element => {
   if (icon && !children && !props['aria-label']) {
     console.warn('Use aria-label prop when using icon only');
   }
 
-  const classes = [styles.Button, styles[variant], styles[size], icon ? styles.iconOnly : ''].filter(Boolean).join(' ');
+  // TODO: remove dual icon usage
 
+  const classes = [styles.Button, styles[variant], styles[size], icon ? styles.iconOnly : ''].filter(Boolean).join(' ');
   return (
     <BaseButton
-      disabled={disabled}
+      disabled={disabled || loading}
       {...props}
       render={href ? <a href={href} /> : undefined}
-      data-disabled={disabled}
+      data-disabled={disabled || loading}
       className={classes}
       style={style}
     >
       {icon ? (
         <>
-          {icon}
+          {/* case 1: replace the text with the spinner*/}
+          {loading ? (
+            <span style={{ height: '1em', width: '1em' }}>
+              <Spinner />
+            </span>
+          ) : (
+            <span style={{ height: '1em', width: '1em' }}>{icon}</span>
+          )}
           {children}
         </>
       ) : (
         <>
-          {leftIcon && leftIcon}
+          {/* case 2: replace left icon with a spinner*/}
+
+          {loading && leftIcon && (
+            <span style={{ height: '1em', width: '1em' }}>
+              <Spinner />
+            </span>
+          )}
+          {!loading && leftIcon && <span style={{ height: '1em', width: '1em' }}>{leftIcon}</span>}
+
           {children}
-          {rightIcon && rightIcon}
+
+          {/* case 3: replace right icon with a spinner*/}
+          {loading && rightIcon && (
+            <span style={{ height: '1em', width: '1em' }}>
+              <Spinner />
+            </span>
+          )}
+          {!loading && rightIcon && <span style={{ height: '1em', width: '1em' }}>{rightIcon}</span>}
+
+          {/* case 4: display a spinner at the right of the text TODO: replace the text*/}
+          {loading && !leftIcon && !rightIcon && !icon && (
+            <span style={{ height: '1em', width: '1em' }}>
+              <Spinner />
+            </span>
+          )}
         </>
       )}
     </BaseButton>

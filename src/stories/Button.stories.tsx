@@ -1,15 +1,22 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button, Typography } from '../main.ts';
-import { FaBeer } from 'react-icons/fa';
+import { Button } from '../main.ts';
+import { FaBeer, FaRegTrashAlt } from 'react-icons/fa';
 import { IoMdClose } from 'react-icons/io';
+
+const iconMap = {
+  None: undefined,
+  Beer: <FaBeer />,
+  Trash: <FaRegTrashAlt />,
+  Close: <IoMdClose />,
+};
 
 const meta: Meta<typeof Button> = {
   title: 'components/Button',
   component: Button,
-  args: {
-    children: 'Cliquez ici',
-  },
   argTypes: {
+    children: {
+      type: 'string',
+    },
     size: {
       options: ['small', 'medium', 'large'],
       control: { type: 'select' },
@@ -21,6 +28,22 @@ const meta: Meta<typeof Button> = {
     href: {
       control: { type: 'text' },
     },
+    disabled: { type: 'boolean' },
+    icon: {
+      options: Object.keys(iconMap),
+      mapping: iconMap,
+      control: { type: 'select' },
+    },
+    leftIcon: {
+      options: Object.keys(iconMap),
+      mapping: iconMap,
+      control: { type: 'select' },
+    },
+    rightIcon: {
+      options: Object.keys(iconMap),
+      mapping: iconMap,
+      control: { type: 'select' },
+    },
   },
 };
 
@@ -28,93 +51,109 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-export const Showcase: Story = {
+export const Default: Story = {
   args: {
-    variant: 'invisible',
-  },
-
-  render: (args) => {
-    const variants = ['default', 'primary', 'danger', 'invisible'] as const;
-    const sizes = ['small', 'medium', 'large'] as const;
-    const states = [
-      { disabled: false, label: 'Rest' },
-      { disabled: true, label: 'Disabled' },
-    ];
-
-    return (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
-        {sizes.map((size) => (
-          <div key={size} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            <Typography variant="body-medium" style={{ textTransform: 'capitalize' }}>
-              {size}
-            </Typography>
-
-            <div style={{ display: 'flex', flexDirection: 'row', gap: '2rem', flexWrap: 'wrap' }}>
-              {variants.map((variant) => (
-                <div key={`${size}-${variant}`} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                    {states.map((state) => (
-                      <div key={state.label} style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                        <Button {...args} size={size} variant={variant} disabled={state.disabled} style={{ textTransform: 'capitalize' }}>
-                          {variant}
-                        </Button>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-    );
+    variant: 'default',
+    size: 'medium',
+    children: 'Click here',
   },
 };
 
 export const Primary: Story = {
-  args: { variant: 'primary' },
+  args: {
+    ...Default.args,
+    variant: 'primary',
+  },
 };
 
 export const Danger: Story = {
-  args: { variant: 'danger' },
+  args: {
+    ...Default.args,
+    variant: 'danger',
+    children: 'Delete Account',
+  },
 };
 
 export const Invisible: Story = {
-  args: { variant: 'invisible' },
-};
-
-export const Href: Story = {
-  args: { href: '/home' },
-};
-
-export const LeftIcon: Story = {
-  render: (args) => {
-    return (
-      <div>
-        <Button leftIcon={<FaBeer />}>Beer</Button>
-      </div>
-    );
+  args: {
+    ...Default.args,
+    variant: 'invisible',
   },
 };
 
-export const RightIcon: Story = {
-  render: (args) => {
-    return (
-      <div>
-        <Button variant={'danger'} rightIcon={<IoMdClose />}>
-          Close
-        </Button>
-      </div>
-    );
+export const Small: Story = {
+  args: {
+    ...Default.args,
+    size: 'small',
   },
 };
 
-export const Icon: Story = {
-  render: (args) => {
-    return (
-      <div>
-        <Button aria-label={'close button'} variant={'danger'} icon={<IoMdClose />}></Button>
-      </div>
-    );
+export const Medium: Story = {
+  args: {
+    ...Default.args,
+    size: 'medium',
+  },
+};
+
+export const Large: Story = {
+  args: {
+    ...Default.args,
+    size: 'large',
+  },
+};
+
+export const IconOnly: Story = {
+  args: {
+    variant: 'invisible',
+    icon: 'Close',
+    children: undefined,
+  },
+};
+
+export const WithLeftIcon: Story = {
+  args: {
+    ...Default.args,
+    leftIcon: 'Beer',
+    children: 'Cheers',
+  },
+};
+
+export const WithRightIcon: Story = {
+  args: {
+    ...Default.args,
+    rightIcon: 'Trash',
+    variant: 'danger',
+    children: 'Trash Item',
+  },
+};
+
+export const WithBothIcons: Story = {
+  args: {
+    ...Default.args,
+    leftIcon: 'Beer',
+    rightIcon: 'Close',
+    children: 'Close Bar',
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    ...Default.args,
+    disabled: true,
+  },
+};
+
+export const AsLink: Story = {
+  args: {
+    ...Default.args,
+    href: 'https://example.com',
+    children: 'Go to Website',
+  },
+};
+
+export const IsLoading: Story = {
+  args: {
+    ...Default.args,
+    loading: true,
   },
 };

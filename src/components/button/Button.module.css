@@ -4,7 +4,9 @@
   justify-content: center;
   height: var(--control-medium-size);
   padding: 0 var(--stack-gap-normal);
-  gap: var(--base-size-1);
+
+  /*TODO: find a better token*/
+  gap: var(--stack-gap-condensed);
   margin: 0;
   outline: 0;
   border: var(--borderWith-thin);
