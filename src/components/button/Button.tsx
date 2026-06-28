@@ -69,7 +69,7 @@ export const Button = ({
               <Spinner />
             </span>
           )}
-          {!loading && leftIcon && <span style={{ height: '1em', width: '1em' }}>{leftIcon}</span>}
+          {!loading && leftIcon && leftIcon}
 
           {children}
 
@@ -79,7 +79,7 @@ export const Button = ({
               <Spinner />
             </span>
           )}
-          {!loading && rightIcon && <span style={{ height: '1em', width: '1em' }}>{rightIcon}</span>}
+          {!loading && rightIcon && rightIcon}
 
           {/* case 4: display a spinner at the right of the text TODO: replace the text*/}
           {loading && !leftIcon && !rightIcon && !icon && (

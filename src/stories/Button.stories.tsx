@@ -1,13 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from '../main.ts';
 import { FaBeer, FaRegTrashAlt } from 'react-icons/fa';
-import { IoMdClose } from 'react-icons/io';
+import { IoMdAttach, IoMdClose, IoMdSend, IoMdSettings } from 'react-icons/io';
 
 const iconMap = {
   None: undefined,
   Beer: <FaBeer />,
   Trash: <FaRegTrashAlt />,
   Close: <IoMdClose />,
+  Attach: <IoMdAttach />,
+  Settings: <IoMdSettings />,
+  Send: <IoMdSend />,
 };
 
 const meta: Meta<typeof Button> = {
