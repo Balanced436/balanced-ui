@@ -16,7 +16,7 @@ interface MyButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: Size;
   href?: string;
   style?: CSSProperties;
-  loading: boolean;
+  loading?: boolean;
 }
 
 export const Button = ({
