@@ -2,7 +2,8 @@
 }
 
 .Preview {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(var(--base-size-64) * 2);
 }

@@ -1,10 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Preview, Table, TableBody, TableCell, TableHead, TableRow } from '../main.ts';
+import { Preview, Table, TableBody, TableCell, TableHead, TableRow } from '../../main.ts';
 
 const meta: Meta<typeof Preview> = {
   title: 'Components/preview',
   component: Preview,
-  tags: ['autodocs'],
   argTypes: {},
 };
 

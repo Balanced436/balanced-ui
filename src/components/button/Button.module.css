@@ -90,6 +90,13 @@
     &:active {
       background-color: var(--button-invisble-bgColor-active);
     }
+
+    /*base ui tabs handles aria selected TODO create a color token for selected*/
+
+    &[aria-selected="true"] {
+      background-color: var(--button-invisble-bgColor-active);
+    }
+
   }
 
   &[data-disabled='true'] {
