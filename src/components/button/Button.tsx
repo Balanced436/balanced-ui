@@ -37,7 +37,7 @@ export const Button = ({
   }
 
   // TODO: remove dual icon usage
-
+  // TODO: add className support
   const classes = [styles.Button, styles[variant], styles[size], icon ? styles.iconOnly : ''].filter(Boolean).join(' ');
   return (
     <BaseButton

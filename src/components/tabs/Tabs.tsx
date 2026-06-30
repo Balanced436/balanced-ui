@@ -45,7 +45,7 @@ const Tab = ({ children, value, className, style, ...rest }: TabProps) => {
       className={`${styles.Tab} ${className || ''}`.trim()}
       value={value}
       style={style}
-      render={(htmlProps, state) => <Button {...htmlProps} variant={'invisible'} size="small" />}
+      render={(htmlProps) => <Button {...htmlProps} variant={'invisible'} size="small" />}
       {...rest}
     >
       {children}

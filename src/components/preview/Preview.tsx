@@ -1,7 +1,8 @@
 import React from 'react';
-import { Tabs } from '../../main.ts';
+import { Button, Tabs } from '../../main.ts';
 import { Code } from '../code/Code.tsx';
 import styles from './Preview.module.css';
+import { IoCopyOutline } from 'react-icons/io5';
 
 interface PreviewProps {
   children: React.ReactNode;
@@ -38,8 +39,26 @@ interface PreviewCodeProps {
 }
 
 const PreviewCode = ({ children, language = 'tsx' }: PreviewCodeProps) => {
+  // TODO: Button should support className prop
+
+  const handleCopy = async () => {
+    // https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText
+    try {
+      await navigator.clipboard.writeText(children);
+      alert('Copied');
+    } catch (e) {
+      console.error(e);
+    }
+  };
   return (
     <Tabs.Panel value="code" className={styles.Code}>
+      <Button
+        icon={<IoCopyOutline />}
+        style={{ position: 'absolute', top: 'var(--base-size-4)', right: 'var(--base-size-4)' }}
+        variant={'invisible'}
+        size={'small'}
+        onClick={handleCopy}
+      ></Button>
       <Code language={language}>{children}</Code>
     </Tabs.Panel>
   );
