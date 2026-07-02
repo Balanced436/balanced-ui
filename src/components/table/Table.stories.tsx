@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Table } from '../components/table/Table.tsx';
-import { TableBody } from '../components/table/TableBody.tsx';
-import { TableCell } from '../components/table/TableCell.tsx';
-import { TableHead } from '../components/table/TableHead.tsx';
-import { TableRow } from '../components/table/TableRow.tsx';
+import { Table } from './Table.tsx';
+import { TableBody } from './TableBody.tsx';
+import { TableCell } from './TableCell.tsx';
+import { TableHead } from './TableHead.tsx';
+import { TableRow } from './TableRow.tsx';
 
 import type { ComponentProps } from 'react';
 

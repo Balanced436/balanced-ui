@@ -1,10 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Navigation, NavigationItem } from '../main.ts';
+import { Navigation, NavigationItem } from '../../main.ts';
 
 const meta: Meta<typeof Navigation> = {
   title: 'Components/Navigation',
   component: Navigation,
-  tags: ['autodocs'],
   args: {
     // Set a default value for the control
     justify: 'flex-start',
@@ -35,26 +34,8 @@ export default meta;
 
 type Story = StoryObj<typeof Navigation>;
 
-export const Standard: Story = {
+export const Default: Story = {
   args: {
     justify: 'flex-start',
-    position: 'relative',
-    orientation: 'horizontal',
-  },
-};
-
-export const Centered: Story = {
-  args: {
-    justify: 'center',
-    position: 'relative',
-    orientation: 'horizontal',
-  },
-};
-
-export const RightAligned: Story = {
-  args: {
-    justify: 'flex-end',
-    position: 'relative',
-    orientation: 'horizontal',
   },
 };

@@ -29,6 +29,7 @@ const SideBarSection = ({ children, title }: { children: React.ReactNode; title:
   );
 };
 
+/*TODO add support for icon */
 const SideBarItem = ({ href, children }: { href: string; children: React.ReactNode }) => {
   return (
     <NavigationMenu.Item className={styles.Item}>

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Typography } from '../main.ts';
+import { Typography } from '../../main.ts';
 
 const PLACEHOLDER = 'Lorem ipsum dolor sit amet';
 
