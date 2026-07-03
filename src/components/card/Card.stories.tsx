@@ -4,7 +4,6 @@ import { Card } from '../../main.ts';
 const meta: Meta<typeof Card> = {
   title: 'Components/Card',
   component: Card,
-  tags: ['autodocs'],
   argTypes: {
     children: {
       control: false,
