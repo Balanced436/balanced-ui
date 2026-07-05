@@ -11,7 +11,7 @@ const elementTypeMap = {
 };
 
 const meta: Meta<typeof Typography> = {
-  title: 'Componen t/Typography',
+  title: 'Component/Typography',
   component: Typography,
   argTypes: {
     variant: {
