@@ -5,12 +5,14 @@ import { NavigationMenu } from '@base-ui/react/navigation-menu';
 
 interface SideBarProps extends React.HTMLProps<HTMLDivElement> {
   children?: React.ReactNode;
+  justify?: 'flex-start' | 'center' | 'flex-end';
 }
-
-export const SideBar = ({ children, className, style }: SideBarProps) => {
+export const SideBar = ({ children, className, style, justify = 'flex-start' }: SideBarProps) => {
   return (
     <NavigationMenu.Root className={`${styles.Root} ${className}`.trim()} style={style}>
-      <NavigationMenu.List className={styles.List}>{children}</NavigationMenu.List>
+      <NavigationMenu.List className={styles.List} data-justify={justify}>
+        {children}
+      </NavigationMenu.List>
     </NavigationMenu.Root>
   );
 };
