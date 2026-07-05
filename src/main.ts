@@ -18,3 +18,4 @@ export { Tabs } from './components/tabs/Tabs.tsx';
 export { Preview } from './components/preview/Preview.tsx';
 export { Spinner } from './components/spinner/Spinner.tsx';
 export { ComponentHeader } from './components/component-header/ComponentHeader.tsx';
+export { Separator } from './components/separator/Separator.tsx';
