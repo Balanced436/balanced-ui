@@ -1,11 +1,13 @@
 import styles from './SideBar.module.css';
 import { Button, Typography } from '../../main.ts';
+import type { CSSProperties } from 'react';
 import * as React from 'react';
 import { NavigationMenu } from '@base-ui/react/navigation-menu';
 
 interface SideBarProps extends React.HTMLProps<HTMLDivElement> {
   children?: React.ReactNode;
   justify?: 'flex-start' | 'center' | 'flex-end';
+  style?: CSSProperties;
 }
 export const SideBar = ({ children, className, style, justify = 'flex-start' }: SideBarProps) => {
   return (
