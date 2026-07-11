@@ -1,5 +1,5 @@
-import { Button as BaseButton } from '@base-ui/react/button';
-import type { ButtonHTMLAttributes, CSSProperties, JSX, ReactNode } from 'react';
+import { Button as BaseButton, type ButtonProps as BaseButtonProps } from '@base-ui/react/button';
+import type { CSSProperties, JSX, ReactNode } from 'react';
 
 import styles from './Button.module.css';
 import { Spinner } from '../../main.ts';
@@ -7,7 +7,7 @@ import { Spinner } from '../../main.ts';
 type Variant = 'primary' | 'default' | 'danger' | 'invisible';
 type Size = 'small' | 'medium' | 'large';
 
-interface MyButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface MyButtonProps extends BaseButtonProps {
   children?: ReactNode;
   variant?: Variant;
   leftIcon?: ReactNode;
@@ -47,6 +47,7 @@ export const Button = ({
       data-disabled={disabled || loading}
       className={classes}
       style={style}
+      nativeButton={href ? false : true}
     >
       {icon ? (
         <>
