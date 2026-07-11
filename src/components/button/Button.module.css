@@ -1,5 +1,5 @@
 .Button {
-    display: inline-flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   height: var(--control-medium-size);
@@ -93,10 +93,9 @@
 
     /*base ui tabs handles aria selected TODO create a color token for selected*/
 
-    &[aria-selected="true"] {
+    &[aria-selected='true'] {
       background-color: var(--button-invisble-bgColor-active);
     }
-
   }
 
   &[data-disabled='true'] {

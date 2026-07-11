@@ -10,7 +10,7 @@ interface ComponentHeaderProps {
 }
 export const ComponentHeader = ({ children, gitlabUrl, storybookUrl }: ComponentHeaderProps) => {
   return (
-    <div className={styles.container}>
+    <span className={styles.container}>
       <Typography variant={'title-large'}>{children}</Typography>
       <div>
         {gitlabUrl && (
@@ -24,6 +24,6 @@ export const ComponentHeader = ({ children, gitlabUrl, storybookUrl }: Component
           </Button>
         )}
       </div>
-    </div>
+    </span>
   );
 };

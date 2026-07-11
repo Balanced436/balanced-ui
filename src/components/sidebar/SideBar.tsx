@@ -34,7 +34,7 @@ const SideBarSection = ({ children, title }: { children: React.ReactNode; title:
 const SideBarItem = ({ href, children }: { href: string; children: React.ReactNode }) => {
   return (
     <NavigationMenu.Item className={styles.Item}>
-      <Button variant={'invisible'} href={href}>
+      <Button variant={'invisible'} size={'small'} href={href}>
         {children}
       </Button>
     </NavigationMenu.Item>
