@@ -13,6 +13,11 @@
     justify-content: flex-end;
   }
 
+  &[data-justify='center'] a {
+    display: flex;
+    justify-content: center;
+  }
+
   padding: 0px;
 }
 
