@@ -1,7 +1,6 @@
 import { Button, Typography } from '../../main.ts';
 import styles from './ComponentHeader.module.css';
-import { SiStorybook } from 'react-icons/si';
-import { FaGitlab } from 'react-icons/fa6';
+import { FiExternalLink } from 'react-icons/fi';
 
 interface ComponentHeaderProps {
   children: string;
@@ -14,12 +13,12 @@ export const ComponentHeader = ({ children, gitlabUrl, storybookUrl }: Component
       <Typography variant={'title-large'}>{children}</Typography>
       <div>
         {gitlabUrl && (
-          <Button rightIcon={<FaGitlab />} variant={'invisible'} href={gitlabUrl}>
+          <Button size={'small'} rightIcon={<FiExternalLink />} variant={'invisible'} href={gitlabUrl}>
             GitLab
           </Button>
         )}
         {storybookUrl && (
-          <Button rightIcon={<SiStorybook />} variant={'invisible'} href={storybookUrl}>
+          <Button size={'small'} rightIcon={<FiExternalLink />} variant={'invisible'} href={storybookUrl}>
             Storybook
           </Button>
         )}
