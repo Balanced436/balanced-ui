@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Navigation, NavigationItem } from '../../main.ts';
+import { NavigationList } from './Navigation.tsx';
 
 const meta: Meta<typeof Navigation> = {
   title: 'Components/Navigation',
@@ -8,15 +9,17 @@ const meta: Meta<typeof Navigation> = {
     // Set a default value for the control
     justify: 'flex-start',
     children: [
-      <NavigationItem key="1" href="/">
-        Accueil
-      </NavigationItem>,
-      <NavigationItem key="2" href="/about">
-        À propos
-      </NavigationItem>,
-      <NavigationItem key="3" href="/contact">
-        Contact
-      </NavigationItem>,
+      <NavigationList>
+        <NavigationItem key="1" href="/">
+          Accueil
+        </NavigationItem>
+        <NavigationItem key="2" href="/about">
+          À propos
+        </NavigationItem>
+        <NavigationItem key="3" href="/contact">
+          Contact
+        </NavigationItem>
+      </NavigationList>,
     ],
   },
   argTypes: {

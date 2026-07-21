@@ -12,6 +12,7 @@
   width: 100%;
   border-bottom: var(--borderWith-thin) #efefef;
   background-color: white;
+  display: flex;
   &[data-position='fixed'] {
     position: fixed;
     top: 0;

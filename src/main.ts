@@ -5,6 +5,7 @@ export { Button } from './components/button/Button.tsx';
 export { Stack } from './components/stack/Stack.tsx';
 export { Navigation } from './components/navigation/Navigation.tsx';
 export { NavigationItem } from './components/navigation/Navigation.tsx';
+export { NavigationList } from './components/navigation/Navigation.tsx';
 export { Typography } from './components/typography/Typography.tsx';
 export { Table } from './components/table/Table.tsx';
 export { TableHead } from './components/table/TableHead.tsx';
