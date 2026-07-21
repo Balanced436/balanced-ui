@@ -79,7 +79,7 @@
 }
 
 .invisible {
-  color: var(--button-invisible-fgColor-rest);
+  color: var(--button-invisble-fgColor-rest);
   background-color: transparent;
   border: none;
 
