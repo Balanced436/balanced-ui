@@ -1,7 +1,9 @@
 .Root {
   display: flex;
   flex-direction: column;
-  gap: var(--stack-gap-normal);
+  background-color: var(--base-color-neutral-1);
+  padding: var(--base-size-4);
+  border-radius: var(--borderRadius-large);
 }
 
 .List {
@@ -16,8 +18,10 @@
   border: var(--borderWith-thin);
   border-color: var(--base-color-neutral-6);
   padding: var(--stack-gap-condensed);
-  border-radius: var(--borderRadius-large);
+  border-bottom-left-radius: var(--borderRadius-large);
+  border-bottom-right-radius: var(--borderRadius-large);
   overflow-y: auto;
+  background-color: var(--base-color-neutral-0);
 
   &[hidden] {
     display: none;

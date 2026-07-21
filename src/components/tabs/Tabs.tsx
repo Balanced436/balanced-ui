@@ -45,7 +45,19 @@ const Tab = ({ children, value, className, style, ...rest }: TabProps) => {
       className={`${styles.Tab} ${className || ''}`.trim()}
       value={value}
       style={style}
-      render={(htmlProps) => <Button {...htmlProps} variant={'invisible'} size="small" />}
+      render={(htmlProps, state) => {
+        {
+          /*TODO: find a better method for additional styles*/
+        }
+        return (
+          <Button
+            style={{ borderBottom: `${state.active ? '1px solid black' : 'unset'}`, borderRadius: 'unset', boxSizing: 'border-box' }}
+            {...htmlProps}
+            variant={'invisible'}
+            size="small"
+          />
+        );
+      }}
       {...rest}
     >
       {children}

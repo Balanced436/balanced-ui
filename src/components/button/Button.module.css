@@ -93,9 +93,11 @@
 
     /*base ui tabs handles aria selected TODO create a color token for selected*/
 
-    &[aria-selected='true'] {
-      background-color: var(--button-invisble-bgColor-active);
-    }
+    /* TODO: visible border radius incoherence when use with preview component / tabs
+      &[aria-selected='true'] {
+        background-color: var(--button-invisble-bgColor-active);
+      }
+    */
   }
 
   &[data-disabled='true'] {
