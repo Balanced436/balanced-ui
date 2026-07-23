@@ -51,7 +51,9 @@ const Tab = ({ children, value, className, style, ...rest }: TabProps) => {
         }
         return (
           <Button
-            style={{ borderBottom: `${state.active ? '1px solid black' : 'unset'}`, borderRadius: 'unset', boxSizing: 'border-box' }}
+            data-tab-active={
+              state.active ? 'true' : undefined
+            } /*style={{ borderBottom: `${state.active ? '1px solid black' : 'unset'}`, borderRadius: 'unset', boxSizing: 'border-box' }}*/
             {...htmlProps}
             variant={'invisible'}
             size="small"

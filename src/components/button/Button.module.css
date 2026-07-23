@@ -93,11 +93,21 @@
 
     /*base ui tabs handles aria selected TODO create a color token for selected*/
 
-    /* TODO: visible border radius incoherence when use with preview component / tabs
-      &[aria-selected='true'] {
+    &[data-tab-active='true'] {
+      /*specific for tab*/
+      box-shadow: inset 0 -2px 0 0 var(--base-color-neutral-13); /*prefer box shadow for border bottom*/
+      border-radius: unset;
+      box-sizing: border-box;
+
+    }
+
+    &[data-sidebar-current='page'] {
+      /*specific for sidebar*/
         background-color: var(--button-invisble-bgColor-active);
+      box-shadow: inset 2px 0 0 0 var(--base-color-neutral-13);
+      border-radius: unset;
       }
-    */
+
   }
 
   &[data-disabled='true'] {
